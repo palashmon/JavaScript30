@@ -7,6 +7,8 @@ and commiting & logging what I have learnt on daily basis.
 
 Thanks!
 
+---
+
 ## LOGS
 
 ### Day 1: 11 Dec 2016
@@ -46,8 +48,12 @@ Thanks!
 Found one more useful trick called `console.trace()`. It helps to print a stack trace from the point where the method was called as you can see in this given example below.
 ![console.trace()](/Images/console_trace.png)
 
-### Day 10: 5 Jan 2017
-**Thoughts:** . . . . . in progress . . . .
+### Day 10: 8 Jan 2017
+**Thoughts:** .Learned a user-friendly feature used by popular email clients.
 
+**Tool Found:** It's so easy now to convert our ES5 code into readable ES6 using [lebab.io](https://lebab.io/try-it)
+
+### Day 11: 9 Jan 2017
+**Thoughts:** ...
 
 
