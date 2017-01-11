@@ -46,7 +46,7 @@ Thanks!
 ![Canvas](https://pbs.twimg.com/media/C1fRlZCWQAAtuMx.jpg)
 
 Found one more useful trick called `console.trace()`. It helps to print a stack trace from the point where the method was called as you can see in this given example below.
-![console.trace()](/Images/console_trace.png)
+![console.trace()](/Challenges/Images/console_trace.png)
 
 ### Day 10: 8 Jan 2017
 **Thoughts:** .Learned a user-friendly feature used by popular email clients.
