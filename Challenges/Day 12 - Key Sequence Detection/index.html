@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection (Konami Code)</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<p><em>Please press the secret code... its 'pal' btw, keep it secret please...</em></p>
+<p><em>You can also look into JavaScript Console for more details</em></p>
+<script>
+
+// Declare the required variables here
+const pressed = [];
+const secretCode = 'pal';
+
+// Listen to window keyup event
+window.addEventListener('keyup', (e) => {
+	console.log(e.key);
+  
+	// Store the entered key name in a variable
+	pressed.push(e.key);
+  
+	// Slice the pressed array to keep its length constant, same as secretCode length
+	pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+  
+	// Check if secret code is present in the pressed array
+	// pressed.join('') converts array values to a string like ["a","b","c"] into "abc"
+	if (pressed.join('').includes(secretCode)) {
+		console.log('Great... you can try again. Just press the secret code again..');
+		cornify_add();
+	}
+  
+	console.log(pressed);
+});
+
+</script>
+</body>
+</html>
