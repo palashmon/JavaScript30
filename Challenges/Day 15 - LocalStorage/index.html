@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LocalStorage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <h2>LOCAL TAPAS</h2>
+    <p></p>
+    <ul class="plates">
+      <li>Loading Tapas...</li>
+    </ul>
+    <form class="add-items">
+      <input type="text" name="item" placeholder="Item Name" required>
+      <input type="submit" value="+ Add Item" /><br/>
+	  <input type="button" value="Clear All" name="clearAll" />
+	  <input type="button" value="Check All" name="checkAll" />
+	  <input type="button" value="Un-Check All" name="uncheckAll" />
+    </form>
+  </div>
+
+<script>
+
+/********************************************************************************
+GOALS:
+✔ Add items to plates dynamically by entering text and clicking add item
+✔ Display the dynamically added items to Tapas list
+✔ Persist the items on page reload
+✔ Toggle checkboxes images on click
+✔ Persist the toggled checkbox images on page reload
+✔ Add clear all button to clear all items on the list
+✔ Add check all button to check all the items present on the list
+✔ Add un-check all button to un-check all the items present on the list
+*********************************************************************************/
+
+/*********************************************************************************
+	Get required elements
+**********************************************************************************/
+const addItems = document.querySelector('.add-items');
+const itemsList = document.querySelector('.plates');
+const clearAll = document.querySelector('[name=clearAll]');
+const checkAll = document.querySelector('[name=checkAll]');
+const uncheckAll = document.querySelector('[name=uncheckAll]');
+const items = JSON.parse(localStorage.getItem('items')) || [];
+
+/*********************************************************************************
+	Add all functions here
+**********************************************************************************/
+
+// Add items to plates dynamically by entering text and clicking add item
+function addItem(e) {
+  e.preventDefault();
+  const text = (this.querySelector('[name=item]')).value;
+  const item = {
+    text,
+    done: false
+  };
+
+  items.push(item);
+  populateList(items, itemsList);
+
+  // Persist the items on page reload
+  localStorage.setItem('items', JSON.stringify(items));
+  this.reset();
+}
+
+// Display the dynamically added items to Tapas list
+function populateList(plates = [], platesList) {
+
+  platesList.innerHTML = 'Loading Tapas...';
+  if (!plates.length) {
+    platesList.innerHTML = 'Please add some items first';
+  } else {
+
+    // Else show the items in the list
+    platesList.innerHTML = plates.map((plate, i) => {
+      return `
+			<li>
+			  <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''} />
+			  <label for="item${i}">${plate.text}</label>
+			</li>
+		  `;
+    }).join('');
+  }
+}
+
+// Toggle checkboxes images on click
+function toggleDone(e) {
+  if (!e.target.matches('input')) return; // skip this unless it's an input
+  const el = e.target;
+  const index = el.dataset.index;
+  items[index].done = !items[index].done;
+  bindList(items);
+}
+
+// clear all items on the list
+function clearAllItems() {
+  items.length = 0;
+  bindList(items);
+}
+
+// check/un-check all the items present on the list
+function toggleAllItems(status) {
+  const checkboxes = document.querySelectorAll('.plates input[type="checkbox"]');
+  checkboxes.forEach(checkbox => {
+    checkbox.checked = items[checkbox.dataset.index].done = status;
+  });
+  bindList(items);
+}
+
+// Bind the Tapas list based on the array data passed
+function bindList(data) {
+  localStorage.setItem('items', JSON.stringify(data));
+  populateList(data, itemsList);
+}
+
+/*********************************************************************************
+	Add all event listeners here
+**********************************************************************************/
+addItems.addEventListener('submit', addItem);
+itemsList.addEventListener('click', toggleDone);
+clearAll.addEventListener('click', clearAllItems);
+checkAll.addEventListener('click', () => toggleAllItems(true));
+uncheckAll.addEventListener('click', () => toggleAllItems(false));
+
+/*********************************************************************************
+	Call a main function on page load
+**********************************************************************************/
+populateList(items, itemsList);
+
+
+</script>
+
+
+</body>
+</html>
+
