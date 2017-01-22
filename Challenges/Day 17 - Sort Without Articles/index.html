@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sort Without Articles</title>
+</head>
+<body>
+
+  <style>
+    body {
+      font-family: Verdana,Helvetica,Sans-Serif;
+      background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #bands {
+      list-style: inside square;
+      font-size: 11.5px;
+      background: white;
+      width: 412px;
+      margin: auto;
+      padding: 0;
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+    #bands li {
+      border-bottom: 1px solid #efefef;
+      padding: 12px 20px;
+    }
+    #bands li:last-child {
+      border-bottom: 0;
+    }
+
+    em {
+      color: green; 
+      float: right;     
+    }
+
+  </style>
+
+  <ul id="bands"></ul>
+
+<script>
+
+/*******************************************************************************
+GOAL: We're given an HTML page with an unordered list, 
+and an array of string values in the script tag. 
+Sort the values in the array excluding the prefixes 'The', A', or 'An' 
+and place the values into the unordered list as list items.
+*******************************************************************************/
+
+// Declare constant variable for band names
+const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+
+// This function accepts a 'bandName' property and returns that provided argument
+// after replacing values that match 'The', A', or 'An' 
+// with an empty string and removing whitespace on either end
+function stripPrefixes(bandName) {
+  return bandName.replace(/^(a |the |an )/i, '').trim();
+}
+
+// Check if the band name have any prefixes 'The', A', or 'An'
+// Then modify the list item 
+function setListItem(band) {
+  //console.log(band.match(/^(a |an |the )/i));
+  if (band.match(/^(a |an |the )/i)) {
+    return `<li>${stripPrefixes(band)} <em>Actual name: ${band}</em></li>`;
+  } else {
+    return `<li>${band}</li>`
+  }
+}
+
+// Declare constant variable and define as the result of sorting through the 'bands'
+// array depending on the band name excluding prefixes ('A', 'The', 'An')
+const sortedBands = bands.sort((a, b) => stripPrefixes(a) > stripPrefixes(b) ? 1 : -1);
+
+// Select the #bands unordered list and update the inner html
+// to be the values in the sortedBands array stored within list items.
+document.querySelector('#bands').innerHTML =
+  sortedBands
+    .map(band => setListItem(band))
+    .join('');
+
+console.log(sortedBands);
+
+</script>
+
+</body>
+</html>
