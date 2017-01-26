@@ -1,9 +1,17 @@
 # JavaScript30
 
+> Course created by [Wes Bos](https://github.com/wesbos)
+
+> Join the challenge (for free!) here - [JavaScript30](https://javascript30.com/account)
+
 Hi there!
 
 This repository is created to keep track of my progress in the awesome JavaScript 30 Day Challenge
 and commiting & logging what I have learnt on daily basis.
+
+Also, please have a look into the users I have helped so far regarding JavaScript30 course queries [here](/QUERIES.md).
+
+If you have any JavaScript/JavaScript30 course realted queries, please create a new issue [here](https://github.com/palashmon/JavaScript30/issues/new). I will try to respond as soon as possible. I am always happy to help and learn new stuff from our JS community. 
 
 Thanks!
 
