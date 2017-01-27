@@ -87,6 +87,11 @@ Tested all new buttons. Data is also persisting on page reload:-
 ![Day 15 new taks](https://pbs.twimg.com/media/C2EYda5XUAAdUdh.jpg)
 
 ### Day 16: 14 Jan 2017
+**Thoughts:** Today learned about assigning to new variable names using ES6 Object destructuring and how we can update CSS rules like textShadow or anything using javascript. Just like canvas this was a fun challenge today. I tried some css effects like this:-
+
+![Day 16 new taks](https://pbs.twimg.com/media/C2IFDhkWQAAv-Ck.jpg)
+
+### Day 17: 16 Jan 2017
 **Thoughts:** ...
 
 
