@@ -91,7 +91,12 @@ Tested all new buttons. Data is also persisting on page reload:-
 
 ![Day 16 new taks](https://pbs.twimg.com/media/C2IFDhkWQAAv-Ck.jpg)
 
-### Day 17: 16 Jan 2017
+### Day 17: 15 Jan 2017
+**Thoughts:**  Updated code to show modified band names on which sort actually happens and on right side the actual band names. After code modifications it looks like this:-
+
+![Day 17 new taks](https://pbs.twimg.com/media/C2N0IDsWIAA9hLT.jpg)
+
+### Day 18: 16 Jan 2017
 **Thoughts:** ...
 
 
