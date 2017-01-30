@@ -101,6 +101,10 @@ Tested all new buttons. Data is also persisting on page reload:-
 
 ![Day 18 new taks](https://pbs.twimg.com/media/C2eCp-xWgAAbhJz.jpg)
 
+**Tools/Sites Found:** 
+ - New, interactive Chrome Dev Tools tutorial: [How to analyze page load performance ⚡️🚀🔎](https://developers.google.com/web/tools/chrome-devtools/network-performance/)
+ - [2016 JavaScript Rising Stars](https://risingstars2016.js.org/)
+
 ### Day 19: 19 Jan 2017
 **Thoughts:** ...
 
