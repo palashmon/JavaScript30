@@ -96,7 +96,12 @@ Tested all new buttons. Data is also persisting on page reload:-
 
 ![Day 17 new taks](https://pbs.twimg.com/media/C2N0IDsWIAA9hLT.jpg)
 
-### Day 18: 16 Jan 2017
+### Day 18: 18 Jan 2017
+**Thoughts:** Learned more about `Array.prototype.reduce()` and its usability test case scenario. `reduce()` is quite simple & effective in specific scenarios like in the example below:-
+
+![Day 18 new taks](https://pbs.twimg.com/media/C2eCp-xWgAAbhJz.jpg)
+
+### Day 19: 19 Jan 2017
 **Thoughts:** ...
 
 
