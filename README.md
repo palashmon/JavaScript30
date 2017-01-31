@@ -105,7 +105,13 @@ Tested all new buttons. Data is also persisting on page reload:-
  - New, interactive Chrome Dev Tools tutorial: [How to analyze page load performance ⚡️🚀🔎](https://developers.google.com/web/tools/chrome-devtools/network-performance/)
  - [2016 JavaScript Rising Stars](https://risingstars2016.js.org/)
 
-### Day 19: 19 Jan 2017
-**Thoughts:** ...
+### Day 19: 21 Jan 2017
+**Thoughts:** It was too much fun today. Learned a lot about canvas and pipelining real-time images.
+
+### Day 20: 22 Jan 2017
+**Thoughts:** Learned about native [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) interface of the Web Speech API and how we can make use of it. Something like we do in google voice search. I think we can use it in various ways. Only limit is our imagination. Also liked the use npm [browser-sync](https://browsersync.io/) for time-saving synchronised browser testing.
+
+### Day 21: 23 Jan 2017
+**Thoughts:**
 
 
