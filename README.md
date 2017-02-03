@@ -111,11 +111,14 @@ Tested all new buttons. Data is also persisting on page reload:-
 ### Day 20: 22 Jan 2017
 **Thoughts:** Learned about native [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) interface of the Web Speech API and how we can make use of it. Something like we do in google voice search. I think we can use it in various ways. Only limit is our imagination. Also liked the use npm [browser-sync](https://browsersync.io/) for time-saving synchronised browser testing.
 
-### Day 21: 23 Jan 2017
+### Day 21: 24 Jan 2017
 **Thoughts:** Worked on Device Orientation using Chrome sensors devtools. Also learned about Geolocation & Orientation Api. Unlike desktops, mobile devices commonly use GPS hardware to detect location. [Tweet Link Here 🐦](https://twitter.com/palashv2/status/823919145557299200)
 
 
-### Day 22: 23 Jan 2017
+### Day 22: 29 Jan 2017
+**Thoughts:** Learned about `Element.getBoundingClientRect()` method and worked on some css effects  [Tweet Link Here 🐦](https://twitter.com/palashv2/status/825757066669076480)
+
+### Day 22: 30 Jan 2017
 **Thoughts:**
 
 
