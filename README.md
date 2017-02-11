@@ -118,7 +118,10 @@ Tested all new buttons. Data is also persisting on page reload:-
 ### Day 22: 29 Jan 2017
 **Thoughts:** Learned about `Element.getBoundingClientRect()` method and worked on some css effects  [Tweet Link Here 🐦](https://twitter.com/palashv2/status/825757066669076480)
 
-### Day 22: 30 Jan 2017
+### Day 23: 5 Feb 2017
+**Thoughts:**  "The Voiceinator 5000" challenge was great. Also, learned about SpeechSynthesis interface.
+
+### Day 24: 30 Jan 2017
 **Thoughts:**
 
 
