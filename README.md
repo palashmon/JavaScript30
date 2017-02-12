@@ -122,6 +122,9 @@ Tested all new buttons. Data is also persisting on page reload:-
 **Thoughts:**  "The Voiceinator 5000" challenge was great. Also, learned about SpeechSynthesis interface.
 
 ### Day 24: 30 Jan 2017
+**Thoughts:** Sticky Nav was really an interesting challenge. Learned about the requirement of padding top in nav element and other UI effects using css.
+
+### Day 25: 30 Jan 2017
 **Thoughts:**
 
 
