@@ -121,10 +121,15 @@ Tested all new buttons. Data is also persisting on page reload:-
 ### Day 23: 5 Feb 2017
 **Thoughts:**  "The Voiceinator 5000" challenge was great. Also, learned about SpeechSynthesis interface.
 
-### Day 24: 30 Jan 2017
+### Day 24: 11 Feb 2017
 **Thoughts:** Sticky Nav was really an interesting challenge. Learned about the requirement of padding top in nav element and other UI effects using css.
 
-### Day 25: 30 Jan 2017
+### Day 25: 11 Feb 2017
+**Thoughts:** Learned about `Event.stopPropagation()` & `EventTarget.addEventListener()` boolean options like capture, once & passive. More details about it here: 
+ - https://developer.mozilla.org/en/docs/Web/API/Event/stopPropagation
+ - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
+### Day 26: 30 Jan 2017
 **Thoughts:**
 
 
