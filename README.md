@@ -129,7 +129,10 @@ Tested all new buttons. Data is also persisting on page reload:-
  - https://developer.mozilla.org/en/docs/Web/API/Event/stopPropagation
  - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 
-### Day 26: 30 Jan 2017
+### Day 26: 13 Feb 2017
+**Thoughts:** It was super-fun learning abt this really slick "follow along" nav found on Stripe's pricing page. [Tweet Link Here 🐦](https://twitter.com/palashv2/status/831161506301612036)
+
+### Day 27: 14 Feb 2017
 **Thoughts:**
 
 
