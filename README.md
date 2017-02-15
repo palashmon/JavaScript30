@@ -133,6 +133,13 @@ Tested all new buttons. Data is also persisting on page reload:-
 **Thoughts:** It was super-fun learning abt this really slick "follow along" nav found on Stripe's pricing page. [Tweet Link Here 🐦](https://twitter.com/palashv2/status/831161506301612036)
 
 ### Day 27: 14 Feb 2017
+**Thoughts:** Understood the basics behind the "Click and Drag to Scroll" challenge. element.offsetLeft play a great role in this logic.
+
+**Tip:** Simple & time-saving tip 
+
+![console image](https://pbs.twimg.com/media/C4oivhGVcAApV3E.jpg)
+
+### Day 28: 15 Feb 2017
 **Thoughts:**
 
 
