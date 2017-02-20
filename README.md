@@ -143,7 +143,10 @@ Tested all new buttons. Data is also persisting on page reload:-
 **Thoughts:** Finished the fantastic video speed controller UI challenge today. These offset properties are pretty important for proper aligments. For block-level elements, `offsetTop`, `offsetLeft`, `offsetWidth`, and `offsetHeight` describe the border box of an element relative to the `offsetParent`. The `offsetParent` element is the nearest ancestor that has a position other than static.
 
 ### Day 29: 16 Feb 2017
-**Thoughts:** 
+**Thoughts:** Finished the beeeeeeeeutiful countdown break clock challenge today. Learned about timestamps, set & clear intervals and `Date.now()`. The `Date.now()` method returns the number of milliseconds elapsed since 1 January 1970 00:00:00 UTC. Because `now()` is a static method of Date, we can always use it as `Date.now()` instead of `new Date().now()`.
+
+### Day 30: 20 Feb 2017
+**Thoughts:** Finally finished #JavaScript30 Day 30 Whack A Mole 🔨 challenge by @wesbos . It was fun learning experience. Highly recommend the entire course.
 
 
 
