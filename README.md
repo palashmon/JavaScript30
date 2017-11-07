@@ -1,7 +1,6 @@
 # JavaScript30
 
-> Course created by [Wes Bos](https://github.com/wesbos)
-
+> Course created by [Wes Bos](https://github.com/wesbos)  
 > Join the challenge (for free!) here - [JavaScript30](https://javascript30.com/account)
 
 Hi there!
@@ -114,7 +113,6 @@ Tested all new buttons. Data is also persisting on page reload:-
 ### Day 21: 24 Jan 2017
 **Thoughts:** Worked on Device Orientation using Chrome sensors devtools. Also learned about Geolocation & Orientation Api. Unlike desktops, mobile devices commonly use GPS hardware to detect location. [Tweet Link Here 🐦](https://twitter.com/palashv2/status/823919145557299200)
 
-
 ### Day 22: 29 Jan 2017
 **Thoughts:** Learned about `Element.getBoundingClientRect()` method and worked on some css effects  [Tweet Link Here 🐦](https://twitter.com/palashv2/status/825757066669076480)
 
@@ -149,4 +147,5 @@ Tested all new buttons. Data is also persisting on page reload:-
 **Thoughts:** Finally finished #JavaScript30 Day 30 Whack A Mole 🔨 challenge. It was fun learning experience. Highly recommend the entire course.
 
 
-
+## Note
+If you like this repo and find it useful, please consider ★ starring it (on top right of the page). Thanks!
