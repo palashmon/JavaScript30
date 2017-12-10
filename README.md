@@ -20,13 +20,16 @@ Thanks!
 
 ## LOGS
 
-### Day 1: 11 Dec 2016
-**Thoughts:** Learned about key event, transitionend event & ES6 template strings.
+### Day 1: 09 Dec 2017
+**Goal:** get the audio to play according to the corresponding key code then add class `playing`and listen for `transitionend` event then remove class `.playing`
+**Things learnt:** keyevents, how to play audio, listening for the transitionend event (dealing with animationend event).
+**Note:** I spend more than 2hrs trying to figure this out. I noted a nice IDE trick from @wesbos like toggle the quotes
 
 **Tool Found:** Nice tool for finding JavaScript event keycodes at [keycode.info](http://keycode.info/)
 
-### Day 2: 13 Dec 2016
-**Thoughts:** Learned about Css transition & transform, ES6 const keyword and live UI update after few seconds.
+### Day 2: 10 Dec 2016
+**Goal:**
+**Things learnt:** Learned about Css transition & transform, ES6 const keyword and live UI update after few seconds.
 
 ### Day 3: 16 Dec 2016
 **Thoughts:** Learned about CSS variables & updating them using JavaScript
