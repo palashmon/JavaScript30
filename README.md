@@ -21,9 +21,9 @@ Thanks!
 ## LOGS
 
 ### Day 1: 09 Dec 2017
-**Goal:** get the audio to play according to the corresponding key code then add class `playing`and listen for `transitionend` event then remove class `.playing`
+**Goal:** get the audio to play according to the corresponding key code then add class `playing`and listen for `transitionend` event then remove class `.playing`.
 **Things learnt:** keyevents, how to play audio, listening for the transitionend event (dealing with animationend event).
-**Note:** I spend more than 2hrs trying to figure this out. I noted a nice IDE trick from @wesbos like toggle the quotes
+**Note:** I spend more than 2hrs trying to figure this out. I noted a nice IDE trick from @wesbos like toggle the quotes.
 
 **Tool Found:** Nice tool for finding JavaScript event keycodes at [keycode.info](http://keycode.info/)
 
