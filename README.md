@@ -27,12 +27,13 @@ Thanks!
 
 **Tool Found:** Nice tool for finding JavaScript event keycodes at [keycode.info](http://keycode.info/)
 
-### Day 2: 10 Dec 2016
-**Goal:**
-**Things learnt:** Learned about Css transition & transform, ES6 const keyword and live UI update after few seconds.
+### Day 2: 11 Dec 2016
+**Goal:** Creat an analog clock that work based on javascript using `transform: rotate(0deg)` `transform-origin: 100%`.
+**Things learnt:** passing style to javascript, setInterval.
 
 ### Day 3: 16 Dec 2016
-**Thoughts:** Learned about CSS variables & updating them using JavaScript
+
+**Thoughts:** 
 
 ### Day 4: 22 Dec 2016
 **Thoughts:** Learned more about JavaScript array methods like filter, map, sort, reduce & others. Really liked ES6 Arrow functions. Shorter functions are most welcome.
