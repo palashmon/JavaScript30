@@ -22,18 +22,22 @@ Thanks!
 
 ### Day 1: 09 Dec 2017
 **Goal:** get the audio to play according to the corresponding key code then add class `playing`and listen for `transitionend` event then remove class `.playing`.
+
 **Things learnt:** keyevents, how to play audio, listening for the transitionend event (dealing with animationend event).
+
 **Note:** I spend more than 2hrs trying to figure this out. I noted a nice IDE trick from @wesbos like toggle the quotes.
 
 **Tool Found:** Nice tool for finding JavaScript event keycodes at [keycode.info](http://keycode.info/)
 
 ### Day 2: 11 Dec 2017
 **Goal:** Creat an analog clock that work based on javascript using `transform: rotate(0deg)` `transform-origin: 100%`.
+
 **Things learnt:** passing style to javascript, setInterval.
 
 ### Day 3: 17 Dec 2017
 
 **Goal:** use javascript to update the css of 3 input element using css variable.
+
 **Things learnt:** how to use events like `change` and `mousemove` to change the value values of the css using css variables `--varname:var value` and `styleproperty: var(--varname)`.
 
 ### Day 4: 17 Dec 2017
