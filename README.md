@@ -20,6 +20,12 @@ Thanks!
 
 ## LOGS
 
+> **Note** the _Key_ to the Log
+> **Goals:** The original plan for the course from @wesbos. 
+> **Things learnt:** My personal take away from the lesson.
+> **Note:** Something worth noting from the lesson. A special mention.
+> **Tool Found:** Any tool @wesbos mention during the lesson.
+
 ### Day 1: 09 Dec 2017
 **Goal:** get the audio to play according to the corresponding key code then add class `playing`and listen for `transitionend` event then remove class `.playing`.
 
@@ -58,29 +64,42 @@ const addTwoNumbers = (x, y) => {
 }
 ```
 
-### Day 5: 25 Dec 2016
-**Thoughts:** Learned few tips about flexbox. Planning to learn more about flexbox at [flexbox.io](http://flexbox.io/) soon. 
+### Day 5: 21 Dec 2017
+**Goals:**
 
-### Day 6: 27 Dec 2016
-**Thoughts:** Learned about Fetch API, getting `.json()` from fetch response, ES6 spread operator. 
+**Things learnt:**
 
-### Day 7: 30 Dec 2016
-**Thoughts:** Learned about new array methods like some, every, find, findIndex. 
+
+### Day 6: 22 Dec 2017
+**Goals:**
+
+**Things learnt:**
+
+### Day 7: 23 Dec 2017
+**Goals:**
+
+**Things learnt:**
 ![Day 7 of 30](https://pbs.twimg.com/media/C07gdtqUAAAtlyM.jpg)
 
-### Day 8: 3 Jan 2017
-**Thoughts:** Had so much fun learning today. Did lots of coding & painting today.
+### Day 8: 24 Dec 2017
+**Goals:**
+
+**Things learnt:**
 ![Canvas](https://pbs.twimg.com/media/C1QFNMYUsAA9cxC.jpg)
 
-### Day 9: 5 Jan 2017
-**Thoughts:** Learned few useful Dev tools tricks. Debugging JavaScript code is so much fun, easy and colorful now.
+### Day 9: 25 Dec 2017
+**Goals:**
+
+**Things learnt:**
 ![Canvas](https://pbs.twimg.com/media/C1fRlZCWQAAtuMx.jpg)
 
 Found one more useful trick called `console.trace()`. It helps to print a stack trace from the point where the method was called as you can see in this given example below.
 ![console.trace()](/Challenges/Images/console_trace.png)
 
-### Day 10: 8 Jan 2017
-**Thoughts:** Learned a user-friendly feature used by popular email clients.
+### Day 10: 26 Dec 2017
+**Goals:**
+
+**Things learnt:**
 
 **Tool Found:** It's so easy now to convert our ES5 code into readable ES6 using [lebab.io](https://lebab.io/try-it)
 
