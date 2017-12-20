@@ -21,10 +21,10 @@ Thanks!
 ## LOGS
 
 > **Note** the _Key_ to the Log
-> **Goals:** The original plan for the course from @wesbos. 
-> **Things learnt:** My personal take away from the lesson.
-> **Note:** Something worth noting from the lesson. A special mention.
-> **Tool Found:** Any tool @wesbos mention during the lesson.
+> **Goals:** The original plan for the course from @wesbos. <br>
+> **Things learnt:** My personal take away from the lesson.<br>
+> **Note:** Something worth noting from the lesson. A special mention.<br>
+> **Tool Found:** Any tool @wesbos mention during the lesson.<br>
 
 ### Day 1: 09 Dec 2017
 **Goal:** get the audio to play according to the corresponding key code then add class `playing`and listen for `transitionend` event then remove class `.playing`.
