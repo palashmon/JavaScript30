@@ -40,11 +40,23 @@ Thanks!
 
 **Things learnt:** how to use events like `change` and `mousemove` to change the value values of the css using css variables `--varname:var value` and `styleproperty: var(--varname)`.
 
-### Day 4: 17 Dec 2017
-**Goals:**
-**Things I learnt:** Learned more about JavaScript array methods like filter, map, sort, reduce & others. Really liked ES6 Arrow functions. Shorter functions are most welcome.
+### Day 4: 20 Dec 2017
+**Goals:** Playing with the Array class in Javascript.
 
-![ES6 Arrow function](https://pbs.twimg.com/media/C0V10qtUcAAct4D.jpg)
+**Things I learnt:** Learned more about JavaScript array methods like filter, map, sort, reduce, `Array.from` .  Really liked ES6 Arrow functions.
+
+```js
+function addTwoNumbers(x, y) {
+  return x + y;
+}
+```
+> Arrow function Equivalent 
+
+```js
+const addTwoNumbers = (x, y) => {
+  return x + y;
+}
+```
 
 ### Day 5: 25 Dec 2016
 **Thoughts:** Learned few tips about flexbox. Planning to learn more about flexbox at [flexbox.io](http://flexbox.io/) soon. 
