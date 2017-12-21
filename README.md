@@ -65,9 +65,9 @@ const addTwoNumbers = (x, y) => {
 ```
 
 ### Day 5: 21 Dec 2017
-**Goals:**
+**Goals:** Create a flex panel gallery that toggle class `open` on click and toggles class `open-active` on transition-end.
 
-**Things learnt:**
+**Things learnt:** Flex box in producing a good gallery and using the transition-end event to toggle a `class`
 
 
 ### Day 6: 22 Dec 2017
