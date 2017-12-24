@@ -20,45 +20,86 @@ Thanks!
 
 ## LOGS
 
-### Day 1: 11 Dec 2016
-**Thoughts:** Learned about key event, transitionend event & ES6 template strings.
+> **Note** the _Key_ to the Log
+> **Goals:** The original plan for the course from @wesbos. <br>
+> **Things learnt:** My personal take away from the lesson.<br>
+> **Note:** Something worth noting from the lesson. A special mention.<br>
+> **Tool Found:** Any tool @wesbos mention during the lesson.<br>
+
+### Day 1: 09 Dec 2017
+**Goal:** get the audio to play according to the corresponding key code then add class `playing`and listen for `transitionend` event then remove class `.playing`.
+
+**Things learnt:** keyevents, how to play audio, listening for the transitionend event (dealing with animationend event).
+
+**Note:** I spend more than 2hrs trying to figure this out. I noted a nice IDE trick from @wesbos like toggle the quotes.
 
 **Tool Found:** Nice tool for finding JavaScript event keycodes at [keycode.info](http://keycode.info/)
 
-### Day 2: 13 Dec 2016
-**Thoughts:** Learned about Css transition & transform, ES6 const keyword and live UI update after few seconds.
+### Day 2: 11 Dec 2017
+**Goal:** Creat an analog clock that work based on javascript using `transform: rotate(0deg)` `transform-origin: 100%`.
 
-### Day 3: 16 Dec 2016
-**Thoughts:** Learned about CSS variables & updating them using JavaScript
+**Things learnt:** passing style to javascript, setInterval.
 
-### Day 4: 22 Dec 2016
-**Thoughts:** Learned more about JavaScript array methods like filter, map, sort, reduce & others. Really liked ES6 Arrow functions. Shorter functions are most welcome.
+### Day 3: 17 Dec 2017
 
-![ES6 Arrow function](https://pbs.twimg.com/media/C0V10qtUcAAct4D.jpg)
+**Goal:** use javascript to update the css of 3 input element using css variable.
 
-### Day 5: 25 Dec 2016
-**Thoughts:** Learned few tips about flexbox. Planning to learn more about flexbox at [flexbox.io](http://flexbox.io/) soon. 
+**Things learnt:** how to use events like `change` and `mousemove` to change the value values of the css using css variables `--varname:var value` and `styleproperty: var(--varname)`.
 
-### Day 6: 27 Dec 2016
-**Thoughts:** Learned about Fetch API, getting `.json()` from fetch response, ES6 spread operator. 
+### Day 4: 20 Dec 2017
+**Goals:** Playing with the Array class in Javascript.
 
-### Day 7: 30 Dec 2016
-**Thoughts:** Learned about new array methods like some, every, find, findIndex. 
+**Things I learnt:** Learned more about JavaScript array methods like filter, map, sort, reduce, `Array.from` .  Really liked ES6 Arrow functions.
+
+```js
+function addTwoNumbers(x, y) {
+  return x + y;
+}
+```
+> Arrow function Equivalent 
+
+```js
+const addTwoNumbers = (x, y) => {
+  return x + y;
+}
+```
+
+### Day 5: 21 Dec 2017
+**Goals:** Create a flex panel gallery that toggle class `open` on click and toggles class `open-active` on transition-end.
+
+**Things learnt:** Flex box in producing a good gallery and using the transition-end event to toggle a `class`
+
+
+### Day 6: 22 Dec 2017
+**Goals:**
+
+**Things learnt:**
+
+### Day 7: 23 Dec 2017
+**Goals:**
+
+**Things learnt:**
 ![Day 7 of 30](https://pbs.twimg.com/media/C07gdtqUAAAtlyM.jpg)
 
-### Day 8: 3 Jan 2017
-**Thoughts:** Had so much fun learning today. Did lots of coding & painting today.
+### Day 8: 24 Dec 2017
+**Goals:**
+
+**Things learnt:**
 ![Canvas](https://pbs.twimg.com/media/C1QFNMYUsAA9cxC.jpg)
 
-### Day 9: 5 Jan 2017
-**Thoughts:** Learned few useful Dev tools tricks. Debugging JavaScript code is so much fun, easy and colorful now.
+### Day 9: 25 Dec 2017
+**Goals:**
+
+**Things learnt:**
 ![Canvas](https://pbs.twimg.com/media/C1fRlZCWQAAtuMx.jpg)
 
 Found one more useful trick called `console.trace()`. It helps to print a stack trace from the point where the method was called as you can see in this given example below.
 ![console.trace()](/Challenges/Images/console_trace.png)
 
-### Day 10: 8 Jan 2017
-**Thoughts:** Learned a user-friendly feature used by popular email clients.
+### Day 10: 26 Dec 2017
+**Goals:**
+
+**Things learnt:**
 
 **Tool Found:** It's so easy now to convert our ES5 code into readable ES6 using [lebab.io](https://lebab.io/try-it)
 
