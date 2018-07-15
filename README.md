@@ -23,7 +23,7 @@ Thanks!
 ### Day 1: 11 Dec 2016
 **Thoughts:** Learned about key event, `transitionend` event & ES6 template strings.  
 **Tool Found:** Nice tool for finding JavaScript event keycodes at [keycode.info](http://keycode.info/)  
-**Demo:** You can play/stop a auto drum routine by pressing spacebar [here](https://palashmon.github.io/JavaScript30/Challenges/Day%2001%20-%20JavaScript%20Drum%20Kit/).
+**Demo:** You can play/stop a auto drum routine by pressing spacebar [here](https://palashmon.github.io/JavaScript30/Challenges/Day%2001%20-%20JavaScript%20Drum%20Kit/) & [here](https://palashmon.github.io/JavaScript30/Challenges/Day%2001%20-%20JavaScript%20Drum%20Kit/index2.html)
 
 ### Day 2: 13 Dec 2016
 **Thoughts:** Learned about Css transition & transform, ES6 const keyword and live UI update after few seconds.
