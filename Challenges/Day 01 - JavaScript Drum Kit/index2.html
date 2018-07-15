@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <input type="button" value="Press Space Key"></input>
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/closedhat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tinkbell.wav"></audio>
+
+  <script>
+
+    /************************************************************************************************
+        GOAL: When a user opens this page and presses a key that corresponds with
+        one of our div elements, we should play the audio clip associated with
+        the keypress, add a class to the specific element that matches with the keypress,
+        and then remove that class in order to reset the element to it's original state.
+    **************************************************************************************************/
+
+    function removeTransition(e) {
+      // Skip if it's not a transform event
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
+
+    function playSound(e) {
+
+      // If space key is pressed then start the auto drum notes
+      if (e.code === 'Space') {
+        play();
+        return;
+      }
+
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+
+      // Stop function from running if key pressed doesn't match up with our elements data-key value
+      if (!audio) return;
+      key.classList.add('playing');
+
+      // Play sound clip from start every time a corresponding key is pressed
+      audio.currentTime = 0;
+      audio.play();
+    }
+
+    // Find all elements in the document with a class 'key'
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+
+
+    /************************************************************************************************
+      Play some auto drum notes
+    ************************************************************************************************/
+    let playing = false;
+    let interval;
+    const totalSteps = 16;
+    let currentStep = 1;
+    let fullSteps = Array.from({ length: 16 }, () => []);
+    const kick = 68;
+    const hihat = 83;
+    const snare = 74;
+    const tink = 76;
+    const openhat = 70;
+    let bpm = 11; // increase or decrease this param to see change in beats per minute
+    let count = 0;
+
+    // Toggle the play button and start/stop the audio based on current state
+    function play(e) {
+      if (playing) {
+        stopAudio();
+      } else {
+        startAudio();
+      }
+      playing = !playing;
+    }
+
+    // Play the instrument that is set for current step
+    function playStep(step) {
+      return Array.from(fullSteps[step]).map((keyCode) => playSound({ keyCode }));
+    }
+
+    // Start the audio, if play button is clicked
+    function startAudio() {
+      interval = setInterval(() => {
+
+        // Add hihat after 2nd round
+        if (++count === 16) {
+          fullSteps = Array.from({ length: 16 }, () => []);
+          createNotes(hihat, [1, 3, 5, 7, 9, 11, 13, 15]);
+          createNotes(snare, [5, 10, 13]);
+          createNotes(kick, [1, 11]);
+        }
+        if (count === 16 * 2) {
+          fullSteps = Array.from({ length: 16 }, () => []);
+          createNotes(hihat, [1, 3, 5, 7, 9, 11, 13, 15]);
+          createNotes(snare, [5, 7, 13]);
+          createNotes(kick, [1, 11]);
+        }
+        if (count === 16 * 3) {
+          fullSteps = Array.from({ length: 16 }, () => []);
+          createNotes(hihat, [1, 3, 5, 7, 9, 15]);
+          createNotes(snare, [5, 10, 13]);
+          createNotes(kick, [1, 11]);
+          createNotes(tink, [11]);
+        }
+        if (count === 16 * 4) {
+          currentStep = 1;
+          count = 0;
+          fullSteps = Array.from({ length: 16 }, () => []);
+          createFullNotes();
+          keys.forEach(key => key.classList.remove('playing'));
+        }
+
+        playStep(currentStep - 1);
+        currentStep = (currentStep < totalSteps) ? currentStep + 1 : 1;
+        if (!playing) stopAudio();
+      }, ~~(1500 / bpm));
+    }
+
+    // Stop the audio, if stop button is clicked
+    function stopAudio() {
+      clearInterval(interval);
+      currentStep = 1;
+      count = 0;
+      fullSteps = Array.from({ length: 16 }, () => []);
+      createFullNotes();
+      keys.forEach(key => key.classList.remove('playing'));
+    }
+
+    // Create setup for what instrument needs to be played at what step
+    function createNotes(instrument, steps) {
+      return Array.from(steps).map((step) => {
+        if (!Array.isArray(fullSteps[step - 1])) {
+          fullSteps[step - 1] = [];
+        }
+        fullSteps[step - 1].push(instrument)
+      });
+    }
+
+    // Create all the notes needed to play the initial audio
+    function createFullNotes() {
+      createNotes(hihat, [1, 3, 5, 7, 9, 11, 13, 15]);
+      createNotes(snare, [5, 7, 13]);
+      createNotes(kick, [1, 11]);
+    }
+
+    // Initialize the initial audio notes
+    createFullNotes();
+  </script>
+
+
+</body>
+
+</html>
