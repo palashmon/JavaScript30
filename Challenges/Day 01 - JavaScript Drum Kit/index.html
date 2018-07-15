@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 
@@ -47,51 +49,148 @@
     </div>
   </div>
 
+  <input type="button" value="Start Audio" id="playAudioButton"></input>
+
   <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="83" src="sounds/closedhat.wav"></audio>
   <audio data-key="68" src="sounds/kick.wav"></audio>
   <audio data-key="70" src="sounds/openhat.wav"></audio>
   <audio data-key="71" src="sounds/boom.wav"></audio>
   <audio data-key="72" src="sounds/ride.wav"></audio>
   <audio data-key="74" src="sounds/snare.wav"></audio>
   <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+  <audio data-key="76" src="sounds/tinkbell.wav"></audio>
 
-<script>
-  
-  /************************************************************************************************ 
-      GOAL: When a user opens this page and presses a key that corresponds with
-      one of our div elements, we should play the audio clip associated with
-      the keypress, add a class to the specific element that matches with the keypress,
-      and then remove that class in order to reset the element to it's original state.
-  **************************************************************************************************/
-  
-  function removeTransition(e) {    
-    // Skip if it's not a transform event
-    if (e.propertyName !== 'transform') return;
-    e.target.classList.remove('playing');
-  }
+  <script>
 
-  function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-    
-    // Stop function from running if key pressed doesn't match up with our elements data-key value
-    if (!audio) return;
-    key.classList.add('playing');
-    
-    // Play sound clip from start every time a corresponding key is pressed
-    audio.currentTime = 0;
-    audio.play();
-  }
-  
-  // Find all elements in the document with a class 'key'
-  const keys = Array.from(document.querySelectorAll('.key'));
-  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-  window.addEventListener('keydown', playSound);
-  
-</script>
+    /************************************************************************************************
+        GOAL: When a user opens this page and presses a key that corresponds with
+        one of our div elements, we should play the audio clip associated with
+        the keypress, add a class to the specific element that matches with the keypress,
+        and then remove that class in order to reset the element to it's original state.
+    **************************************************************************************************/
+
+    function removeTransition(e) {
+      // Skip if it's not a transform event
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
+
+    function playSound(e) {
+
+      // If space key is pressed then start the auto drum notes
+      if (e.code === 'Space') {
+        play();
+        return;
+      }
+
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+
+      // Stop function from running if key pressed doesn't match up with our elements data-key value
+      if (!audio) return;
+      key.classList.add('playing');
+
+      // Play sound clip from start every time a corresponding key is pressed
+      audio.currentTime = 0;
+      audio.play();
+    }
+
+    // Find all elements in the document with a class 'key'
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+
+
+    /************************************************************************************************
+      Play some auto drum notes
+    ************************************************************************************************/
+    let playing = false;
+    let interval;
+    const totalSteps = 16;
+    let currentStep = 1;
+    let fullSteps = Array.from({ length: 16 }, () => []);
+    const kick = 68;
+    const hihat = 83;
+    const snare = 74;
+    const tink = 76;
+    let bpm = 12; // increase or decrease this 12 param to see change in beats per minute
+    let count = 0;
+
+    // Add the click event listener to our play button
+    const playAudioButton = document.querySelector('#playAudioButton');
+    playAudioButton.addEventListener('click', play);
+
+    // Toggle the play button and start/stop the audio based on current state
+    function play(e) {
+      playAudioButton.value = playing ? 'Start Audio' : 'Stop Audio';
+      if (playing) {
+        stopAudio();
+      } else {
+        startAudio();
+      }
+      playing = !playing;
+    }
+
+    // Play the instrument that is set for current step
+    function playStep(step) {
+      return Array.from(fullSteps[step]).map((keyCode) => playSound({ keyCode }));
+    }
+
+    // Start the audio, if play button is clicked
+    function startAudio() {
+      interval = setInterval(() => {
+
+        // Add hihat after 2nd round
+        if (++count === 32) {
+          createNotes(hihat, [1, 3, 5, 7, 9, 11, 13, 15]);
+        }
+
+        // Add tink after 4th round
+        if (count === 32 * 2) {
+          createNotes(tink, [2, 4, 7, 12]);
+        }
+        if (count === 32 * 4) {
+          createNotes(tink, [3, 5, 8, 13]);
+        }
+
+        playStep(currentStep - 1);
+        currentStep = (currentStep < totalSteps) ? currentStep + 1 : 1;
+        if (!playing) stopAudio();
+      }, ~~(1500 / bpm));
+    }
+
+    // Stop the audio, if stop button is clicked
+    function stopAudio() {
+      clearInterval(interval);
+      currentStep = 1;
+      count = 0;
+      fullSteps = Array.from({ length: 16 }, () => []);
+      createFullNotes();
+      keys.forEach(key => key.classList.remove('playing'));
+    }
+
+    // Create setup for what instrument needs to be played at what step
+    function createNotes(instrument, steps) {
+      return Array.from(steps).map((step) => {
+        if (!Array.isArray(fullSteps[step - 1])) {
+          fullSteps[step - 1] = [];
+        }
+        fullSteps[step - 1].push(instrument)
+      });
+    }
+
+    // Create all the notes needed to play the initial audio
+    function createFullNotes() {
+      createNotes(kick, [1, 4, 7, 11]);
+      createNotes(snare, [5, 13]);
+    }
+
+    // Initialize the initial audio notes
+    createFullNotes();
+  </script>
 
 
 </body>
+
 </html>
