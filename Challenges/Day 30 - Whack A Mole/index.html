@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Whack A Mole!</title>
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>Whack-a-mole! <span class="score">0</span></h1>
+  <h1>Whack-a-mole!</h1>
+  <h2>Score:
+    <span class="score">0</span>
+  </h2>
   <button onClick="startGame()">Start!</button>
 
   <div class="game">
@@ -31,57 +36,61 @@
       <div class="mole"></div>
     </div>
   </div>
+  <audio src="clap.wav"></audio>
+  <script>
+    const holes = document.querySelectorAll('.hole');
+    const scoreBoard = document.querySelector('.score');
+    const moles = document.querySelectorAll('.mole');
+    const clapSound = document.querySelector('audio');
+    let lastHole;
+    let timeUp = false;
+    let score = 0;
 
-<script>
-  const holes = document.querySelectorAll('.hole');
-  const scoreBoard = document.querySelector('.score');
-  const moles = document.querySelectorAll('.mole');
-  let lastHole;
-  let timeUp = false;
-  let score = 0;
-
-  function randomTime(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
-  }
-
-  function randomHole(holes) {
-    const idx = Math.floor(Math.random() * holes.length);
-    const hole = holes[idx];
-    if (hole === lastHole) {
-      console.log('Ah nah thats the same one bud');
-      return randomHole(holes);
+    function randomTime(min, max) {
+      return Math.round(Math.random() * (max - min) + min);
     }
-    lastHole = hole;
-    return hole;
-  }
 
-  function peep() {
-    const time = randomTime(200, 1000);
-    const hole = randomHole(holes);
-    hole.classList.add('up');
-    setTimeout(() => {
-      hole.classList.remove('up');
-      if (!timeUp) peep();
-    }, time);
-  }
+    function randomHole(holes) {
+      const idx = Math.floor(Math.random() * holes.length);
+      const hole = holes[idx];
+      if (hole === lastHole) {
+        console.log('Ah nah thats the same one bud');
+        return randomHole(holes);
+      }
+      lastHole = hole;
+      return hole;
+    }
 
-  function startGame() {
-    scoreBoard.textContent = 0;
-    timeUp = false;
-    score = 0;
-    peep();
-    setTimeout(() => timeUp = true, 10000)
-  }
+    function peep() {
+      const time = randomTime(250, 1000);
+      const hole = randomHole(holes);
+      hole.classList.add('up');
+      setTimeout(() => {
+        hole.classList.remove('up');
+        if (!timeUp) peep();
+      }, time);
+    }
 
-  function bonk(e) {
-    if(!e.isTrusted) return; // cheater!
-    score++;
-    this.classList.remove('up');
-    scoreBoard.textContent = score;
-  }
+    function startGame() {
+      scoreBoard.textContent = 0;
+      timeUp = false;
+      score = 0;
+      peep();
+      setTimeout(() => timeUp = true, 10000)
+    }
 
-  moles.forEach(mole => mole.addEventListener('click', bonk));
+    function bonk(e) {
+      if (!e.isTrusted) return; // cheater!
+      score++;
+      this.classList.remove('up');
+      scoreBoard.textContent = score;
+      clapSound.currentTime = 0;
+      clapSound.play();
+    }
 
-</script>
+    moles.forEach(mole => mole.addEventListener('click', bonk));
+
+  </script>
 </body>
+
 </html>
