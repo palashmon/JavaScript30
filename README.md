@@ -12,7 +12,7 @@ and commiting & logging what I have learnt on daily basis.
 
 Also, please have a look into the users I have helped so far regarding JavaScript30 course queries [here](/QUERIES.md).
 
-If you have any JavaScript/JavaScript30 course realted queries, please create a new issue [here](https://github.com/palashmon/JavaScript30/issues/new). I will try to respond as soon as possible. I am always happy to help and learn new stuff from our JS community. 
+If you have any JavaScript/JavaScript30 course realted queries, please create a new issue [here](https://github.com/palashmon/JavaScript30/issues/new). I will try to respond as soon as possible. I am always happy to help and learn new stuff from our JS community.
 
 Thanks!
 
@@ -21,8 +21,8 @@ Thanks!
 ## LOGS
 
 ### Day 1: 11 Dec 2016
-**Thoughts:** Learned about key event, `transitionend` event & ES6 template strings.  
-**Tool Found:** Nice tool for finding JavaScript event keycodes at [keycode.info](http://keycode.info/)  
+**Thoughts:** Learned about key event, `transitionend` event & ES6 template strings.
+**Tool Found:** Nice tool for finding JavaScript event keycodes at [keycode.info](http://keycode.info/)
 **Demo:** You can play/stop a auto drum routine by pressing spacebar [here](https://palashmon.github.io/JavaScript30/Challenges/Day%2001%20-%20JavaScript%20Drum%20Kit/) & [here](https://palashmon.github.io/JavaScript30/Challenges/Day%2001%20-%20JavaScript%20Drum%20Kit/index2.html)
 
 ### Day 2: 13 Dec 2016
@@ -37,13 +37,13 @@ Thanks!
 ![ES6 Arrow function](https://pbs.twimg.com/media/C0V10qtUcAAct4D.jpg)
 
 ### Day 5: 25 Dec 2016
-**Thoughts:** Learned few tips about flexbox. Planning to learn more about flexbox at [flexbox.io](http://flexbox.io/) soon. 
+**Thoughts:** Learned few tips about flexbox. Planning to learn more about flexbox at [flexbox.io](http://flexbox.io/) soon.
 
 ### Day 6: 27 Dec 2016
-**Thoughts:** Learned about Fetch API, getting `.json()` from fetch response, ES6 spread operator. 
+**Thoughts:** Learned about Fetch API, getting `.json()` from fetch response, ES6 spread operator.
 
 ### Day 7: 30 Dec 2016
-**Thoughts:** Learned about new array methods like some, every, find, findIndex. 
+**Thoughts:** Learned about new array methods like some, every, find, findIndex.
 ![Day 7 of 30](https://pbs.twimg.com/media/C07gdtqUAAAtlyM.jpg)
 
 ### Day 8: 3 Jan 2017
@@ -67,10 +67,10 @@ Found one more useful trick called `console.trace()`. It helps to print a stack 
 
 ![ES6 arrow functions](https://pbs.twimg.com/media/C1vYSZ7XUAEqZXS.jpg)
 
-**Tool Found:** [ESLint v3.13.1](http://eslint.org/blog/2017/01/eslint-v3.13.1-released) has been released today. 
+**Tool Found:** [ESLint v3.13.1](http://eslint.org/blog/2017/01/eslint-v3.13.1-released) has been released today.
 
 ### Day 12: 10 Jan 2017
-**Thoughts:** Learned about key sequence detection & Konami code. Also, found that [BuzzFeed site](https://www.buzzfeed.com/)'s hidden easter egg is still working. To see it in action just press ':arrow_up: :arrow_up: :arrow_down: :arrow_down: :arrow_left: :arrow_right: :arrow_left: :arrow_right: B A'. 
+**Thoughts:** Learned about key sequence detection & Konami code. Also, found that [BuzzFeed site](https://www.buzzfeed.com/)'s hidden easter egg is still working. To see it in action just press ':arrow_up: :arrow_up: :arrow_down: :arrow_down: :arrow_left: :arrow_right: :arrow_left: :arrow_right: B A'.
 
 ### Day 13: 11 Jan 2017
 **Thoughts:** Learned a bit more about window events & a very useful javascript debounce function. Today's project helped me to fix an issue related to resize events which was slowing down our site. The goal behind debounce implementation is to reduce overhead by preventing a function from being called several times in succession.
@@ -79,7 +79,7 @@ Found one more useful trick called `console.trace()`. It helps to print a stack 
 **Thoughts:** Learned more about array & object reference vs actual copy. Found that primitive types are manipulated by value & reference types are manipulated by reference. Numbers and booleans are primitive types in JavaScript -- primitive because they consist of nothing more than a small, fixed number of bytes that are easily manipulated at the low (primitive) levels of the JavaScript interpreter. Objects, on the other hand, are reference types. Arrays and functions, which are specialized types of objects, are therefore also reference types. These data types can contain arbitrary numbers of properties or elements, so they cannot be manipulated as easily as fixed-size primitive values can. Since object and array values can become quite large, it doesn't make sense to manipulate these types by value, as this could involve the inefficient copying and comparing of large amounts of memory.
 
 ### Day 15: 13 Jan 2017
-**Thoughts:** Learned some useful stuff on local Storage & event delegation. 
+**Thoughts:** Learned some useful stuff on local Storage & event delegation.
 
 Completed all of the project goals for today:-
 ![Day 15](https://pbs.twimg.com/media/C2EWpE7XgAAG3sp.jpg)
@@ -102,7 +102,7 @@ Tested all new buttons. Data is also persisting on page reload:-
 
 ![Day 18 new taks](https://pbs.twimg.com/media/C2eCp-xWgAAbhJz.jpg)
 
-**Tools/Sites Found:** 
+**Tools/Sites Found:**
  - New, interactive Chrome Dev Tools tutorial: [How to analyze page load performance ⚡️🚀🔎](https://developers.google.com/web/tools/chrome-devtools/network-performance/)
  - [2016 JavaScript Rising Stars](https://risingstars2016.js.org/)
 
@@ -125,7 +125,7 @@ Tested all new buttons. Data is also persisting on page reload:-
 **Thoughts:** Sticky Nav was really an interesting challenge. Learned about the requirement of padding top in nav element and other UI effects using css.
 
 ### Day 25: 11 Feb 2017
-**Thoughts:** Learned about `Event.stopPropagation()` & `EventTarget.addEventListener()` boolean options like capture, once & passive. More details about it here: 
+**Thoughts:** Learned about `Event.stopPropagation()` & `EventTarget.addEventListener()` boolean options like capture, once & passive. More details about it here:
  - https://developer.mozilla.org/en/docs/Web/API/Event/stopPropagation
  - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 
@@ -135,7 +135,7 @@ Tested all new buttons. Data is also persisting on page reload:-
 ### Day 27: 14 Feb 2017
 **Thoughts:** Understood the basics behind the "Click and Drag to Scroll" challenge. element.offsetLeft play a great role in this logic.
 
-**Tip:** Simple & time-saving tip 
+**Tip:** Simple & time-saving tip
 
 ![console image](https://pbs.twimg.com/media/C4oivhGVcAApV3E.jpg)
 
@@ -147,6 +147,7 @@ Tested all new buttons. Data is also persisting on page reload:-
 
 ### Day 30: 20 Feb 2017
 **Thoughts:** Finally finished #JavaScript30 Day 30 Whack A Mole 🔨 challenge. It was fun learning experience. Highly recommend the entire course.
+**Demo:** You can play the game [here](https://palashmon.github.io/JavaScript30/Challenges/Day%2030%20-%20Whack%20A%20Mole/) and keep the audio on for some fun.
 
 
 ## Note
