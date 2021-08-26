@@ -3,12 +3,9 @@
 html {
   font-size: 10px;
   background: #2980b9; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2c3e50, #2980b9); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #2c3e50,
-    #2980b9
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
 }
 
 body,
@@ -110,4 +107,10 @@ input[type='button'] {
   color: white;
   background: rgba(0, 0, 0, 0.4);
   text-shadow: 0 0 5px black;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
