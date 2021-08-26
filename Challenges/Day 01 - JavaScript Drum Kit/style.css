@@ -1,19 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
 html {
   font-size: 10px;
   background: #2980b9; /* fallback for old browsers */
   background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
   background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+  animation: gradient-animation 15s ease infinite;
 }
 
+* {
+  padding: 0; 
+  margin: 0;
+  box-sizing: border-box;
+}
 body,
 html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
   height: 100%;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
